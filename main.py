@@ -7,6 +7,7 @@ print("Enter jos valmis, 0 lopettaa")
 print("t = tilasto, r = nollaa tilasto")
 
 while True:
+    asetukset = lue_asetukset()
     done = input("Done? ")
 
     if done == "t":
@@ -20,11 +21,10 @@ while True:
     if done == "0":
         break
 
-    asetukset = lue_asetukset()
+
 
     #Valitaan aktiviteetti
     aktiviteetti = valinta(asetukset, "aktiviteetit")
-    
 
     try:
         tilastoon("aktiviteetit", aktiviteetti, asetukset)
