@@ -1,16 +1,30 @@
 {
-    "aktiviteetit": [
-        "perhe",
-        "liikunta",
-        "hengellinen",
-        "projekti"
-    ],
-    "aktiviteetit_jaljella": [],
-    "projektit": [
-        "puutyö",
-        "valokuvaus",
-        "ohjelmointi",
-        "musiikki"
-    ],
-    "projektit_jaljella": []
+    "aktiviteetit": {
+        "kaikki": [
+            "perhe",
+            "liikunta",
+            "hengellinen",
+            "projekti"
+        ],
+        "vaihtoehdot": [
+
+        ],
+        "estetyt": [
+
+        ]
+    },
+    "projektit": {
+        "kaikki": [
+            "puutyö",
+            "valokuvaus",
+            "ohjelmointi",
+            "musiikki"
+        ],
+        "vaihtoehdot": [
+ 
+        ],
+        "estetyt": [
+
+        ]
+    }
 }

@@ -1,31 +1,17 @@
-import random
-from tiedoston_kasittely import *
-
-asetukset = lue_asetukset()
-
-aktiviteetit = asetukset["aktiviteetit"]
-aktiviteetit_jaljella = asetukset["aktiviteetit_jaljella"]
-projektit = asetukset["projektit"]
-projektit_jaljella = asetukset["projektit_jaljella"]
+from tiedoston_kasittely import lue_asetukset
+from valitse_FIFO import valinta
 
 print("Enter jos valmis, 0 lopettaa")
 while True:
-    #alustus
-    if not aktiviteetit_jaljella:
-        aktiviteetit_jaljella = aktiviteetit.copy()
-    if not projektit_jaljella:
-        projektit_jaljella = projektit.copy()
-
+    asetukset = lue_asetukset()
     #Valitaan aktiviteetti
-    aktiviteetti = random.choice(aktiviteetit_jaljella)
-    aktiviteetit_jaljella.remove(aktiviteetti)
+    aktiviteetti = valinta(asetukset, "aktiviteetit")
     if aktiviteetti == "projekti":
-        aktiviteetti = random.choice(projektit_jaljella)
-        projektit_jaljella.remove(aktiviteetti)
-            
-    print(f"{aktiviteetti}")
-    kirjoita_asetukset(asetukset, aktiviteetit_jaljella, projektit_jaljella)
+        aktiviteetti = valinta(asetukset, "projektit")
 
+    print(f"{aktiviteetti}")
+    
     done = input("Done? ")
     if done == "0":
         break
+    
