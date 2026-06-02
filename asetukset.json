@@ -8,13 +8,13 @@
             "projekti"
         ],
         "vaihtoehdot": [
+            "hengellinen",
             "perhe",
-            "liikunta",
-            "projekti"
+            "siivous"
         ],
         "estetyt": [
-            "siivous",
-            "hengellinen"
+            "liikunta",
+            "projekti"
         ]
     },
     "projektit": {
@@ -25,12 +25,12 @@
             "musiikki"
         ],
         "vaihtoehdot": [
-            "ohjelmointi",
+            "valokuvaus",
             "musiikki"
         ],
         "estetyt": [
             "puutyö",
-            "valokuvaus"
+            "ohjelmointi"
         ]
     }
 }

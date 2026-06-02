@@ -1,32 +1,41 @@
-from tiedoston_kasittely import lue_asetukset, tilastoon, tulosta_tilasto, tilasto_init
+from tiedoston_kasittely import lue_asetukset 
+from tiedoston_kasittely import tilasto_init, tilasto_paivita
+from tiedoston_kasittely import tilastoon, tulosta_tilasto
 from valitse_FIFO import valinta
 
 print("Enter jos valmis, 0 lopettaa")
 print("t = tilasto, r = nollaa tilasto")
 
 while True:
+    done = input("Done? ")
+
+    if done == "t":
+        tulosta_tilasto()
+        continue
+
+    if done == "r":
+        tilasto_init(asetukset)
+        continue
+
+    if done == "0":
+        break
+
     asetukset = lue_asetukset()
+
     #Valitaan aktiviteetti
     aktiviteetti = valinta(asetukset, "aktiviteetit")
     
+
     try:
-        tilastoon(aktiviteetti)
+        tilastoon("aktiviteetit", aktiviteetti, asetukset)
     except:
         tilasto_init(asetukset)
-        tilastoon(aktiviteetti)
+        tilastoon("aktiviteetit", aktiviteetti, asetukset)
 
     if aktiviteetti == "projekti":
         aktiviteetti = valinta(asetukset, "projektit")
-
-    print(f"{aktiviteetti}")
+        tilastoon("projektit", aktiviteetti, asetukset)
+    print(f"- {aktiviteetti}")
     
-    done = input("Done? ")
-    if done == "t":
-        tulosta_tilasto()
-        done = input("Done? ")
-    if done == "0":
-        break
-    if done == "r":
-        tilasto_init(asetukset)
         
     
