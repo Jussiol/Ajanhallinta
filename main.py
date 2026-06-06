@@ -13,6 +13,7 @@ def tallenna(aktiviteetti, asetukset):
     if aktiviteetti == "projekti":
         aktiviteetti = valinta(asetukset, "projektit")
         tilastoon("projektit", aktiviteetti, asetukset)
+    return aktiviteetti
 
 print("Enter jos valmis, 0 lopettaa")
 print("p = ohita, 4 = arvo päivän aktivieetit ja lopeta")
@@ -27,7 +28,7 @@ while True:
         #Valitaan aktiviteetti
         aktiviteetti = valinta(asetukset, "aktiviteetit")
         if done != "p":
-            tallenna(aktiviteetti, asetukset)
+            aktiviteetti = tallenna(aktiviteetti, asetukset)
         print(f"- {aktiviteetti}")
         done = ""
     if done == "t":
@@ -46,8 +47,8 @@ while True:
             aktiviteetti = valinta(asetukset, "aktiviteetit")
             ok = input(f"Ok? -> {aktiviteetti}")
             if ok == "":
-                aktiviteettilista.append(aktiviteetti)
-                tallenna(aktiviteetti, asetukset)
+                naytettava = tallenna(aktiviteetti, asetukset)
+                aktiviteettilista.append(naytettava)
                 hyvaksytyt += 1
         print()
         print("Päivän ohjelma:")
