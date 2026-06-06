@@ -8,13 +8,13 @@
             "projekti"
         ],
         "vaihtoehdot": [
-            "hengellinen",
-            "perhe",
-            "siivous"
+            "siivous",
+            "projekti",
+            "liikunta"
         ],
         "estetyt": [
-            "liikunta",
-            "projekti"
+            "perhe",
+            "hengellinen"
         ]
     },
     "projektit": {

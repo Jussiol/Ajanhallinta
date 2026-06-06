@@ -1,15 +1,15 @@
 {
     "aktiviteetit": {
-        "perhe": 0,
-        "liikunta": 0,
-        "hengellinen": 0,
-        "siivous": 0,
-        "projekti": 0
+        "perhe": 1,
+        "liikunta": 3,
+        "hengellinen": 3,
+        "siivous": 2,
+        "projekti": 2
     },
     "projektit": {
-        "puutyö": 0,
+        "puutyö": 1,
         "valokuvaus": 0,
-        "ohjelmointi": 0,
+        "ohjelmointi": 1,
         "musiikki": 0
     }
 }

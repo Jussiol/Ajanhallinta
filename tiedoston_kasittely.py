@@ -117,3 +117,8 @@ def tulosta_tilasto():
         print(f"{vasen:<20} | {oikea}")
 
     print()
+
+def paiva_akt():
+    #avataan asetukset
+    with open(base_dir() / "tilasto.json", encoding= "utf-8") as j:
+        tilasto = json.load(j)
